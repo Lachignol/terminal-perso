@@ -25,7 +25,7 @@ const scrollToBottom = (ref) => {
 
   return (
    
-      <div className='App'  ref={appRef} onClick={()=>{inputRef.current.focus()}}>
+      <div className='App'  ref={appRef} onClick={()=>inputRef.current.focus()}>
         
         <div className="terminal" >
         {output}

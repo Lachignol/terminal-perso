@@ -20,10 +20,10 @@ break
 return newOutput
 }
 
-// const show=async(data)=>{
-// let result=""
-// return result+= await data.map((el)=>result+= `<p>${el.titre}</p>`)
+const show=(data)=>{
+let result=""
+return result+= data.map((el)=>result+= `<p>${el.titre}</p>`)
  
-// }
+}
 
 
