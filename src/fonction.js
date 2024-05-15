@@ -4,7 +4,9 @@ import { projects } from "./data";
 export const switchCase =(input,newOutput)=>{
  switch(input.slice(1)){
 case "ls":
-newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
+    newOutput += `<ul>${show(projects)}</ul>`
+// newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
+
 
 break;
 case "pwd":
@@ -20,9 +22,9 @@ break
 return newOutput
 }
 
-const show=(data)=>{
-let result=""
-return result+= data.map((el)=>result+= `<p>${el.titre}</p>`)
+const show=(contenu)=>{
+return  contenu.map((el)=>`<li>${el.titre}</li>`)
+
  
 }
 
