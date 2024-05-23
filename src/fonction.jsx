@@ -2,64 +2,36 @@ import { projects } from "./data";
 import Projects from "./components/projects";
 import Documents from "./components/documents";
 
-export const switchCase = (input,output) => {
-  let newOutput=""
-  switch (input.slice(1)) {
-    case "ls":
-      newOutput = <Show  output={output} command={"ls"} input={input} />
-      // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
+export const switchCase = (input, output) => {
+  let newOutput = "";
+  let validCommand = ["ls", "pwd", "projets", "clear"];
 
-      break;
-    case "pwd":
-      newOutput = <Show data={projects} output={output} command={"pwd"} input={input} />
-      break;
-    case "clear":
-      newOutput = <Show data={projects} output={output} command={"clear"} input={input} />
-      break;
-      case "projets":
-      newOutput = <Show output={output} command={"projets"} input={input} />
-      break;
-    default:
-      newOutput = <Show data={projects} output={output} command={"wrong"} input={input} />
-      break;
+  if (validCommand.includes(input.slice(1))) {
+    newOutput = <Show output={output} command={input.slice(1)} input={input} />;
+    // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
+  } else {
+    newOutput = <Show output={output} command={"wrong"} input={input} />;
   }
+
   return newOutput;
 };
 
-
-
-function Show({data,output,command,input}) {
-let Command = command
-console.log(command)
+function Show({output, command, input }) {
+  let Command = command;
+  console.log(command);
   return (
     <>
-    {Command != "clear" && (
-     <> 
-    <p>{output}</p>
-    <p>{input}</p>
-    </>
-  )}
-    
-    {Command == "ls" && (
-     <Documents />
-    )}
-    {Command == "pwd" && (
-     <p>scordi/path/</p>
-    )}
-    {Command == "wrong" && (
-     <p>wrond command</p>
-    )}
-    {Command == "projets" && (
-     <Projects />
-    )}
-   
-    
-     
-    
+      {Command != "clear" && (
+        <>
+          <p>{output}</p>
+          <p>{input}</p>
+        </>
+      )}
+
+      {Command == "ls" && <Documents />}
+      {Command == "pwd" && <p>scordi/path/</p>}
+      {Command == "wrong" && <p>wrond command</p>}
+      {Command == "projets" && <Projects />}
     </>
   );
 }
-
-
-
-
