@@ -3,11 +3,12 @@ import "./App.css";
 import { switchCase } from "./fonction.jsx";
 
 function App() {
+  const [prompt,setPrompt]=useState("$")
   const [input, setInput] = useState("$");
   const [output, setOutput] = useState("bienvenu sur ton oncle.com");
   const inputRef = useRef("");
   const appRef = useRef("");
-  let promptLength= 0;
+  let promptLength= prompt.length-1;
 
   useEffect(() => {
     inputRef.current.focus();
@@ -19,7 +20,7 @@ function App() {
     
   };
 
-
+console.log(promptLength)
 
   return (
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>

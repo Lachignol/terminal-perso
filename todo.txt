@@ -1,2 +1,2 @@
-reglé le soucis du prompt qu'on peu effacer
+
 réglé les different cas et nouvelle commande 
