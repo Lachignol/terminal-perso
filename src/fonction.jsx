@@ -6,8 +6,8 @@ export const switchCase = (input, output) => {
   let newOutput = "";
   let validCommand = ["ls", "pwd", "projets", "clear"];
 
-  if (validCommand.includes(input.slice(1))) {
-    newOutput = <Show output={output} command={input.slice(1)} input={input} />;
+  if (validCommand.includes(input.slice(1).trim().toLowerCase())) {
+    newOutput = <Show output={output} command={input.slice(1).trim().toLowerCase()} input={input} />;
     // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
   } else {
     newOutput = <Show output={output} command={"wrong"} input={input} />;
