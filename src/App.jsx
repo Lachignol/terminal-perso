@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { switchCase } from "./fonction";
+import { switchCase } from "./fonction.jsx";
 
 function App() {
   const [input, setInput] = useState("$");
@@ -15,7 +15,10 @@ function App() {
 
   const scrollToBottom = (ref) => {
     ref.current?.scrollIntoView({ block: "end", behavior: "smooth" });
+    
   };
+
+
 
   return (
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>
@@ -30,10 +33,11 @@ function App() {
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
-            let newOutput ="";
-            newOutput = output + "\n" + input + "\n";
+            
+            // newOutput = output + "\n" + input + "\n";
 
-            setOutput(switchCase(input,newOutput));
+            setOutput(switchCase(input,output));
+            
             setInput("$");
           }
         }}
