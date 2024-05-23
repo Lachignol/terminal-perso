@@ -11,7 +11,7 @@ const projects=[
         },
         {titre:"projet 2",
         description:"bloblolblolo",
-        lien:"https://www.google.com",
+        lien:"https://portfolio-scordi.vercel.app",
         lienTitre:"adress bidonos"
         },
         ]
