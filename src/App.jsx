@@ -7,6 +7,7 @@ function App() {
   const [output, setOutput] = useState("bienvenu sur ton oncle.com");
   const inputRef = useRef("");
   const appRef = useRef("");
+  let promptLength= 0;
 
   useEffect(() => {
     inputRef.current.focus();
@@ -28,8 +29,8 @@ function App() {
         type="texte"
         ref={inputRef}
         value={input}
-        onChange={(e)=> {
-          setInput(e.target.value);
+        onChange={(e)=> {e.target.value >= e.target.value[promptLength]?
+          setInput(e.target.value):"";
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
