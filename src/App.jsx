@@ -33,11 +33,7 @@ function App() {
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
-            
-            // newOutput = output + "\n" + input + "\n";
-
             setOutput(switchCase(input,output));
-            
             setInput("$");
           }
         }}
