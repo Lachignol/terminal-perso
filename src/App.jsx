@@ -6,9 +6,10 @@ function App() {
   const [prompt,setPrompt]=useState("$")
   const [input, setInput] = useState(prompt);
   const [output, setOutput] = useState(">bienvenu sur ton oncle.com");
+  const [promptLength,setPromptLength]= useState(prompt.length-1);
   const inputRef = useRef("");
   const appRef = useRef("");
-  let promptLength= prompt.length-1;
+
 
   useEffect(() => {
     inputRef.current.focus();
