@@ -1,1 +1,2 @@
 probleme de police et de prompt after before c'est une galere
+essayer de faire clignoter cursor
