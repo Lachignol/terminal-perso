@@ -1,4 +1,3 @@
-import { projects } from "./data";
 import Projects from "./components/projects";
 import Documents from "./components/documents";
 
@@ -24,7 +23,7 @@ function Show({output, command, input }) {
       {Command != "clear" && (
         <>
           <p>{output}</p>
-          <p>{input}</p>
+          <p className="beforeInput">{input.slice(1)}</p>
         </>
       )}
 

@@ -21,13 +21,15 @@ const projects=[
 
     return (
         <>
+        <ul>
         {projects.map((project, index) => (
             <div key={index}>
-              <p>{project.titre}</p>
-              <p>{project.description}</p>
-              <p><a href={project.lien}>{project.lienTitre}</a></p>
+              <li>{project.titre}</li>
+              <li>{project.description}</li>
+              <li><a href={project.lien}>{project.lienTitre}</a></li>
             </div>
           ))}
+          </ul>
           </>
     );
 };

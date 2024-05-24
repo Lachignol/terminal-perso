@@ -4,8 +4,8 @@ import { switchCase } from "./fonction.jsx";
 
 function App() {
   const [prompt,setPrompt]=useState("$")
-  const [input, setInput] = useState("$");
-  const [output, setOutput] = useState("bienvenu sur ton oncle.com");
+  const [input, setInput] = useState(prompt);
+  const [output, setOutput] = useState(">bienvenu sur ton oncle.com");
   const inputRef = useRef("");
   const appRef = useRef("");
   let promptLength= prompt.length-1;
@@ -24,9 +24,12 @@ console.log(promptLength)
 
   return (
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>
-      <div className="terminal">{output}</div>
+      <div className="terminal">{output}
 
-      <input
+
+      
+      <input 
+        className="lastInput"
         type="texte"
         ref={inputRef}
         value={input}
@@ -36,11 +39,16 @@ console.log(promptLength)
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             setOutput(switchCase(input,output));
-            setInput("$");
+            setInput(prompt);
           }
         }}
-      ></input>
+        
+      />
+      
+     
     </div>
+    </div>
+
   );
 }
 
