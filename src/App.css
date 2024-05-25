@@ -1,6 +1,5 @@
 body {
-  
-margin: 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -8,15 +7,6 @@ margin: 0;
   -moz-osx-font-smoothing: grayscale;
   background: black;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-
-
-
 
 @-webkit-keyframes cursor-blink {
   0% {
@@ -60,10 +50,7 @@ code {
   }
 }
 
-
-
-
-.App{
+.App {
   color: #1ff042;
   display: block;
   font-family: "AndaleMono", monospace;
@@ -75,14 +62,7 @@ code {
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
   margin-bottom: 0.75em;
- 
 }
-
-
-
-
-
-
 
 a {
   color: white;
@@ -98,14 +78,20 @@ a:hover {
   text-decoration: underline;
 }
 
+.beforeInput::before {
+  content: ">";
+  display: inline-block;
+}
 
+ul {
+  list-style: none;
+  margin-right: 1rem;
+}
 
-
-
- input {
+input {
   border: none;
   color: #1ff042;
-  background-color:black;
+  background-color: black;
   display: block;
   font-family: "AndaleMono", monospace;
   margin-top: 1em;
@@ -115,61 +101,15 @@ a:hover {
   white-space: pre-wrap;
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
-  margin-bottom: 0.75em;
-} 
+}
 
 input:focus {
-  outline:none!important;
+  outline: none !important;
   scroll-behavior: auto;
-  
 }
 
-
-
-.beforeInput::before {
+.lastInput::before{
   content: ">";
   display: inline-block;
-}
 
-
-
-
-/* .lastInput {
-  display: block;
-  width: 0.75em;
-  height: 1em;
-  margin-left: 5px;
-  background: #1ff042;
-  box-shadow: 1px 1px 1px rgba(31, 240, 66, 0.65),
-    -1px -1px 1px rgba(31, 240, 66, 0.65), 1px -1px 1px rgba(31, 240, 66, 0.65),
-    -1px 1px 1px rgba(31, 240, 66, 0.65);
-  -webkit-animation: cursor-blink 1.25s steps(1) infinite;
-  -moz-animation: cursor-blink 1.25s steps(1) infinite;
-  animation: cursor-blink 1.25s steps(1) infinite;
-  content: "";
-  
-} */
-
-
-
-/* .terminal{
-  color: #1ff042;
-  display: block;
-  font-family: "AndaleMono", monospace;
-  font-weight: bold;
-  font-size: 0.9em;
-  letter-spacing: 0.15em;
-  white-space: pre-wrap;
-  text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
-  line-height: 1;
-  margin-bottom: 0.75em;
-  white-space: pre-line;
-} */
-
-
-
-
-ul{
-  list-style: none;
-  margin-right: 1rem;
 }

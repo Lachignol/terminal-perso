@@ -1,12 +1,12 @@
 import Projects from "./components/projects";
 import Documents from "./components/documents";
 
-export const switchCase = (input, output) => {
-  let newOutput = "";
+export const switchCase = (input, output,setPrompt) => {
+  let newOutput ;
   let validCommand = ["ls", "pwd", "projets", "clear"];
 
-  if (validCommand.includes(input.slice(1).trim().toLowerCase())) {
-    newOutput = <Show output={output} command={input.slice(1).trim().toLowerCase()} input={input} />;
+  if (validCommand.includes(input.trim().toLowerCase())) {
+    newOutput = <Show output={output} command={input.trim().toLowerCase()} input={input} setPrompt={setPrompt} />;
     // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
   } else {
     newOutput = <Show output={output} command={"wrong"} input={input} />;
@@ -15,15 +15,14 @@ export const switchCase = (input, output) => {
   return newOutput;
 };
 
-function Show({output, command, input }) {
+function Show({output, command, input ,setPrompt}) {
   let Command = command;
-  console.log(command);
   return (
     <>
       {Command != "clear" && (
         <>
-          <p>{output}</p>
-          <p className="beforeInput">{input.slice(1)}</p>
+          {output}
+          <p className="beforeInput">{input}</p>
         </>
       )}
 
@@ -32,5 +31,6 @@ function Show({output, command, input }) {
       {Command == "wrong" && <p>wrond command</p>}
       {Command == "projets" && <Projects />}
     </>
+    
   );
 }
