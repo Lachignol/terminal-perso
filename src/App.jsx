@@ -3,17 +3,19 @@ import "./App.css";
 import { switchCase } from "./fonction.jsx";
 
 function App() {
-  const [prompt, setPrompt] = useState(">");
+  const [prompt,setPrompt] = useState("scordi>");
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("tape ls pour voir les fichiers dispo");
-  const [promptLength,setPromptLength] = useState(prompt.length);
   const inputRef = useRef("");
   const appRef = useRef("");
 
+  
 
   useEffect(() => {
     inputRef.current.focus();
     scrollToBottom(appRef);
+    
+
   }, [output]);
 
   const scrollToBottom = (ref) => {
@@ -26,25 +28,29 @@ function App() {
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>
       <div className="terminal">{output} </div>
 
+
+
+      <div className="terminal-input-area">
+      <span className="terminal-prompt">{prompt}</span>
       <input
-         
+          className="terminal-input"
           type="texte"
           ref={inputRef}
-          value={prompt+input}
+          value={input}
          
-          onChange={(e) => {e.target.value > e.target.value[promptLength]?
-           "":setInput(e.target.value.slice(promptLength))
-            ;
+          onChange={(e) => {
+           setInput(e.target.value)
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              setOutput(switchCase(input, output,setPrompt));
+              setOutput(switchCase(input,output,prompt.toString()));
               setInput("");
               
 
             }
           }}
       />
+     </div>
      
      
      

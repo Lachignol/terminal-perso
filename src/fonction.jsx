@@ -1,28 +1,35 @@
 import Projects from "./components/projects";
 import Documents from "./components/documents";
 
-export const switchCase = (input, output,setPrompt) => {
+export const switchCase = (input, output,prompt,setPrompt) => {
+  
   let newOutput ;
   let validCommand = ["ls", "pwd", "projets", "clear"];
 
   if (validCommand.includes(input.trim().toLowerCase())) {
-    newOutput = <Show output={output} command={input.trim().toLowerCase()} input={input} setPrompt={setPrompt} />;
+    newOutput = <Show output={output} command={input.trim().toLowerCase()} input={input} prompt={prompt} setPrompt={setPrompt} />;
     // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
   } else {
-    newOutput = <Show output={output} command={"wrong"} input={input} />;
+    newOutput = <Show output={output} command={"wrong"} input={input} prompt={prompt} />;
   }
 
   return newOutput;
 };
 
-function Show({output, command, input ,setPrompt}) {
+function Show({output, command,input,prompt,setPrompt}) {
+  console.log(prompt)
   let Command = command;
   return (
     <>
       {Command != "clear" && (
         <>
-          {output}
-          <p className="beforeInput">{input}</p>
+          <div>{output}</div>
+          <div className="terminal-input-area">
+          <span className="terminal-prompt">{prompt}</span>
+           <p className="terminal-input">{input}</p>
+
+    </div>
+  
         </>
       )}
 
