@@ -78,25 +78,15 @@ a:hover {
   text-decoration: underline;
 }
 
-.beforeInput::before {
-  content: ">";
-  display: inline-block;
-}
-
 ul {
   list-style: none;
   margin-right: 1rem;
 }
 
-
 input:focus {
   outline: none !important;
   scroll-behavior: auto;
 }
-
-
-
-
 
 .terminal-input-area {
   display: inline-flex;
@@ -105,9 +95,8 @@ input:focus {
 }
 
 .terminal-prompt {
-  margin-right:auto;
+  margin-right: auto;
 }
-
 
 .terminal-input {
   border: none;
@@ -127,17 +116,3 @@ input:focus {
   outline: none;
   width: 100%;
 }
-
-
-.terminal-input-area::before {
-  display: inline-flex;
-  width: 100%;
-  align-items: center;
-}
-
-.terminal-prompt::before {
-  margin-top:0.8rem;
-  margin-right: 5px;
-}
-
-
