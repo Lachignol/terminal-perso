@@ -43,6 +43,12 @@ function App() {
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
+              if (input == "cd in"){
+              setPrompt(`${prompt.slice(0,prompt.length-1)}/in>`)
+              setOutput(switchCase(input,output,prompt.toString()));
+              setInput("")
+              }
+              else
               setOutput(switchCase(input,output,prompt.toString()));
               setInput("");
               

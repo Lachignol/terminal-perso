@@ -4,10 +4,11 @@ import Documents from "./components/documents";
 export const switchCase = (input, output,prompt,setPrompt) => {
   
   let newOutput ;
-  let validCommand = ["ls", "pwd", "projets", "clear"];
+  let validCommand = ["ls", "pwd", "projets", "clear","cd in"];
+  console.log(input)
 
   if (validCommand.includes(input.trim().toLowerCase())) {
-    newOutput = <Show output={output} command={input.trim().toLowerCase()} input={input} prompt={prompt} setPrompt={setPrompt} />;
+    newOutput = <Show output={output} command={input.trim().toLowerCase()} input={input} prompt={prompt}  />;
     // newOutput += projects.titre + "\n" + projects.description +"\n"+ projects.lien + " " +projects.lienTitre
   } else {
     newOutput = <Show output={output} command={"wrong"} input={input} prompt={prompt} />;
@@ -16,7 +17,7 @@ export const switchCase = (input, output,prompt,setPrompt) => {
   return newOutput;
 };
 
-function Show({output, command,input,prompt,setPrompt}) {
+function Show({output, command,input,prompt}) {
   console.log(prompt)
   let Command = command;
   return (
