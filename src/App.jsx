@@ -3,7 +3,7 @@ import "./App.css";
 import { switchCaseCommand, switchCasePath } from "./fonction.jsx";
 
 function App() {
-  const [prompt,setPrompt] = useState("scordi>");
+  const [prompt,setPrompt] = useState("scordi/portfolio>");
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("tape ls pour voir les fichiers dispo");
   const inputRef = useRef("");
@@ -45,7 +45,7 @@ function App() {
             if (e.key === "Enter") {
             if (input.split(" ")[0] == "cd"){
               setPrompt(switchCasePath(input,prompt));
-              // setOutput(switchCaseCommand(input,output,prompt.toString()));
+              setOutput(switchCaseCommand(input,output,prompt.toString()));
               setInput("")
               }
               else
