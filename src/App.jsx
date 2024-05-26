@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { switchCase } from "./fonction.jsx";
+import { switchCaseCommand, switchCasePath } from "./fonction.jsx";
 
 function App() {
   const [prompt,setPrompt] = useState("scordi>");
@@ -43,13 +43,13 @@ function App() {
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              if (input == "cd in"){
-              setPrompt(`${prompt.slice(0,prompt.length-1)}/in>`)
-              setOutput(switchCase(input,output,prompt.toString()));
+            if (input.split(" ")[0] == "cd"){
+              setPrompt(switchCasePath(input,prompt));
+              // setOutput(switchCaseCommand(input,output,prompt.toString()));
               setInput("")
               }
               else
-              setOutput(switchCase(input,output,prompt.toString()));
+              setOutput(switchCaseCommand(input,output,prompt.toString()));
               setInput("");
               
 
