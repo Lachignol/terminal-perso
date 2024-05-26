@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { switchCaseCommand, switchCasePath } from "./fonction.jsx";
+import { switchCaseCommand, switchCasePath,switchCaseCat } from "./fonction.jsx";
 
 function App() {
   const [prompt,setPrompt] = useState("scordi/portfolio>");
@@ -43,11 +43,15 @@ function App() {
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-            if (input.split(" ")[0] == "cd"){
+            if (input.trim().split(" ")[0] == "cd"){
               setPrompt(switchCasePath(input,prompt));
               setOutput(switchCaseCommand(input,output,prompt.toString()));
               setInput("")
               }
+            if(input.trim().split(" ")[0] == "cat"){
+              setOutput(switchCaseCat(input,output,prompt.toString()));
+              setInput("")
+            }
               else
               setOutput(switchCaseCommand(input,output,prompt.toString()));
               setInput("");
