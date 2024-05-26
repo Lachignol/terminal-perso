@@ -69,10 +69,10 @@ function Show({output, command,input,prompt}) {
       )}
 
       {Command == "ls" && prompt == "scordi/portfolio>" && <Documents />}
-      {Command == "ls" && prompt == "scordi>" && "portolio"}
+      {Command == "ls" && prompt == "scordi>" && <p>portolio</p>}
       {Command == "pwd" && <p>{prompt}</p>}
       {Command == "wrong" && <p>wrong command</p>}
-      {Command == "projets" && <Projects />}
+      {Command == "projets" && prompt == "scordi/portfolio>" && <Projects />}
     </>
     
   );
