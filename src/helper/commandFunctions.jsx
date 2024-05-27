@@ -27,7 +27,6 @@ export const switchCaseCommand = (input, output, prompt,) => {
   };
   
   function ShowCommand({ output, command, input, prompt }) {
-    console.log(prompt);
     let Command = command;
     return (
       <>

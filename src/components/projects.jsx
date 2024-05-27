@@ -55,13 +55,6 @@ const Projects = () => {
       lienGit: "https://github.com/Lachignol/Dataviz",
       lienActif: "",
     },
-
-    {
-      titre: "Portfolio en ligne",
-      description: "portfolio description",
-      lienGit: "faux lien ya pas ",
-      lienActif: "https://portfolio-scordi.vercel.app",
-    },
   ];
 
   return (

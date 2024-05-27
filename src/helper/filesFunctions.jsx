@@ -47,7 +47,6 @@ export const switchCaseCat = (input, output, prompt) => {
 };
 
 function ShowCat({ output, command, input, prompt }) {
-  console.log(prompt);
   let Command = command;
   return (
     <>

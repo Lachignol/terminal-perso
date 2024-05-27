@@ -56,7 +56,6 @@ export const switchCasePath = (input, output, prompt) => {
 };
 
 function ShowPath({ output, command, input, prompt }) {
-  console.log(prompt);
   let Command = command;
   return (
     <>
