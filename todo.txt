@@ -3,4 +3,4 @@ css revoir les couleurs c'est pas trop ca .....
 chercher des palettes coherante sur le net
 
 
-* et idée de mettre un fichier caché trouvable avec un ls -a
+* remplir le fichier secret avec un truc interessant

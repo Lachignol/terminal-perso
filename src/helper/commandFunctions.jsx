@@ -6,7 +6,7 @@ import Help from "../components/help";
 export const switchCaseCommand = (input, output, prompt,) => {
     let newOutput;
   
-    let validCommand = ["ls", "pwd", "clear","help",""];
+    let validCommand = ["ls", "pwd", "clear","help","ls -a",""];
   
     if (validCommand.includes(input.trim().toLowerCase())) {
       newOutput = (
@@ -45,6 +45,8 @@ export const switchCaseCommand = (input, output, prompt,) => {
         {Command == "ls" && prompt == "scordi/portfolio>" && <Documents />}
         {Command == "ls" && prompt == "scordi>" && <p className='document-item'>portfolio</p>}
         {Command == "pwd" && <p className="pwd-result">{prompt.slice(0, prompt.length - 1)}</p>}
+        {Command == "ls -a" && prompt == "scordi/portfolio>" && <Documents />}
+        {Command == "ls -a" && prompt == "scordi>" && <><p className='document-item'>portfolio</p><p className='document-item'>fichiersecret.txt</p></>}
         {Command == "wrong" && <p className="wrong">mauvaise commande tapez help pour voir les commande disponibles</p>}
       </>
     );

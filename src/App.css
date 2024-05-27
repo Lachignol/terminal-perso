@@ -183,6 +183,11 @@ color: blanchedalmond;
   color: darkorange;
 }
 
+
+.contenu-secret{
+  color: darkgoldenrod;
+}
+
 @media only screen and (min-width: 767px) {
   .documents-container{
     display: grid;
