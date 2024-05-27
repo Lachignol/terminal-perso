@@ -21,7 +21,7 @@ export const switchCaseCat = (input, output, prompt) => {
     "cat fichiersecret",
     "cat fichiersecret.scrt",
   ];
-  console.log(input);
+  
 
   if (validCommand.includes(input.trim().toLowerCase())) {
     newOutput = (
