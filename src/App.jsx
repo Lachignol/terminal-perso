@@ -1,7 +1,10 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { switchCaseCommand, switchCasePath,switchCaseCat, switchCaseSetPath } from "./fonction.jsx";
+
 import { Autocomplete } from "./helper/autocomplete.jsx";
+import { switchCasePath, switchCaseSetPath } from "./helper/pathFunctions.jsx";
+import { switchCaseCat } from "./helper/filesFunctions.jsx";
+import { switchCaseCommand } from "./helper/commandFunctions.jsx";
 
 function App() {
   const [prompt,setPrompt] = useState("scordi/portfolio>");
