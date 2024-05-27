@@ -7,22 +7,17 @@ import { switchCaseCat } from "./helper/filesFunctions.jsx";
 import { switchCaseCommand } from "./helper/commandFunctions.jsx";
 import Introduction from "./helper/introduction.jsx";
 
-
 function App() {
   const inputRef = useRef("");
   const appRef = useRef("");
   const [prompt, setPrompt] = useState("scordi/portfolio>");
   const [input, setInput] = useState("");
-  const [output, setOutput] = useState(<Introduction/>);
-
-
+  const [output, setOutput] = useState(<Introduction />);
 
   useEffect(() => {
     inputRef.current.focus();
     scrollToBottom(appRef);
   }, [output]);
-
-
 
   const scrollToBottom = (ref) => {
     ref.current?.scrollIntoView({ block: "end", behavior: "smooth" });
@@ -30,7 +25,6 @@ function App() {
 
   return (
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>
-
       <div className="terminal">{output} </div>
 
       <div className="terminal-input-area">
@@ -46,17 +40,17 @@ function App() {
           onKeyDown={(e) => {
             if (e.key === "Tab") {
               e.preventDefault();
-              console.log("in tab");
+
               Autocomplete(input) ? setInput(Autocomplete(input)) : "";
             }
             if (e.key === "Enter") {
               if (input.toLocaleLowerCase().trim().split(" ")[0] == "cd") {
-                console.log(input.trim().split(" ")[0] == "cd");
-
                 setOutput(switchCasePath(input, output, prompt.toString()));
                 setPrompt(switchCaseSetPath(input, prompt));
                 setInput("");
-              } else if (input.toLocaleLowerCase().trim().split(" ")[0] == "cat") {
+              } else if (
+                input.toLocaleLowerCase().trim().split(" ")[0] == "cat"
+              ) {
                 setOutput(switchCaseCat(input, output, prompt.toString()));
                 setInput("");
               } else
