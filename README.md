@@ -5,7 +5,7 @@ Comme tous les autres portfolios, mon portfolio est conçu pour me présenter.
 
 APERCU DU PROJET:
 
-https://vercel.com/lachignols-projects/portfolio-scordilis-alexandre
+https://portfolio-scordilis-alexandre.vercel.app/
 
 TECH STACK:
 Langages: Javascript,React
