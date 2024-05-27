@@ -1,7 +1,7 @@
 import Projects from "../components/projects";
 import Contacts from "../components/contact";
 import Education from "../components/education";
-import Apropos from "../components/apropos";
+import Bio from "../components/Bio";
 
 
 
@@ -74,7 +74,7 @@ function ShowCat({ output, command, input, prompt }) {
         <p>No such file</p>
       )}
        {Command == "cat bio" && prompt == "scordi/portfolio>" && (
-        <Apropos />
+        <Bio />
       )}
       {Command == "cat bio" && prompt != "scordi/portfolio>" && (
         <p>No such file</p>

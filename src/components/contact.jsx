@@ -4,12 +4,12 @@ const Contacts = () => {
 const contacts=[
     {
         platform: "Github",
-        link: "https://github.com/Lachignol",
+        lien: "https://github.com/Lachignol",
       },
 
       {
         platform: "Linkedin",
-        link: "https://linkedin.com/in/alexandre-scordilis",
+        lien: "https://linkedin.com/in/alexandre-scordilis",
       },
 ]
 
