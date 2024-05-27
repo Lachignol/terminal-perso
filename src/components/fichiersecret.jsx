@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Fichiersecret = () => {
-    return (
-        <div>
-            <p className='contenu-secret'>contenu secret</p>
-        </div>
-    );
+  return (
+    <div>
+      <p className="contenu-secret">contenu secret</p>
+    </div>
+  );
 };
 
 export default Fichiersecret;
