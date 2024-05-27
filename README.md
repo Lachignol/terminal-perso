@@ -1,8 +1,19 @@
-# React + Vite
+#Terminal - mon portfolio sous forme de terminal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Comme tous les autres portfolios, mon portfolio est conçu pour me présenter.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Aperçu du projet:
+
+https://vercel.com/lachignols-projects/portfolio-scordilis-alexandre
+
+##Tech Stack
+Langages: Javascript,React
+
+##Fonctionnalités du portfolio
+ -Architecture système avec dossier/repertoire sous-repertoire et fichier.
+ -Systeme de navigation (prompt) automatiquement maj et systeme de controle.
+ -Autocompletion en appuyant sur la touche Tab(uniquement sur ordinateur).
+ -Responsive et certaine commande non sensible a la casse (pour que les majuscules auto des mobiles ne pose pas problème)
+
+
