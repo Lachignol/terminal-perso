@@ -9,7 +9,7 @@ const projects=[
         description:"Création d’un site d’administration/création de course de vélo urbaine.",
         stack:"Node.Js-Express-Mongodb-React-Tailwind.",
         lienGit:"https://github.com/Lachignol/chat_de_gouttiere",
-        lienActif:"adress bidon"
+        lienActif:""
         },
         {titre:"Pari d'ami",
         description:"Création d’une application mobile pour parier entre amis.",
@@ -21,7 +21,7 @@ const projects=[
         description:"Création d’un blog.",
         stack:"Laravel(php)-PostgreSQL-Tailwinds.",
         lienGit:"https://github.com/Lachignol/projet-collectif-microblogging-alexandre-jeremie-claire",
-        lienActif:"adress bidonos"
+        lienActif:""
         },
         {titre:"Noyales",
         description:"Création d'un site E-commerce dédié à la vente de meubles.",
@@ -64,11 +64,11 @@ const projects=[
         <ul>
         {projects.map((project, index) => (
             <div key={index}>
-              <li>{project.titre}</li>
-              <li>{project.description}</li>
-              <li>{project.stack}</li>
-              <li><a href={project.lienGit} target="_blank">Voici le lien github</a></li>
-              {project.lienActif && <li><a href={project.lienActif}>Voici le lien du site</a></li>}
+              <li className='projet-titre'>--{project.titre}--</li>
+              <li className='projet-description'>{project.description}</li>
+              <li className='projet-stack'>stack:{project.stack}</li>
+              <li><a href={project.lienGit} target="_blank">lien github</a></li>
+              {project.lienActif && <li><a href={project.lienActif}>lien du site</a></li>}
             </div>
           ))}
           </ul>

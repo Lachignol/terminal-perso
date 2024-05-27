@@ -1,11 +1,17 @@
 import Projects from "../components/projects";
 import Contacts from "../components/contact";
 import Education from "../components/education";
-import Bio from "../components/Bio";
+import Bio from "../components/bio";
 
 
 
-
+const downloadFile = (url, downloadName) => {
+  const link = document.createElement("a");
+  link.download = downloadName;
+  link.href = url;
+  link.click();
+  link.remove();
+};
 
 
 
@@ -13,7 +19,7 @@ import Bio from "../components/Bio";
 export const switchCaseCat = (input, output, prompt,) => {
   let newOutput;
 
-  let validCommand = ["cat projets","cat contacts","cat education","cat bio"];
+  let validCommand = ["cat projets","cat contacts","cat education","cat bio","cat cv"];
   console.log(input);
 
   if (validCommand.includes(input.trim().toLowerCase())) {
@@ -79,6 +85,14 @@ function ShowCat({ output, command, input, prompt }) {
       {Command == "cat bio" && prompt != "scordi/portfolio>" && (
         <p>No such file</p>
       )}
+       {Command == "cat cv" && prompt == "scordi/portfolio>" && (
+        downloadFile("/ScordilisAlexandre.pdf", "Scordilis_Alexandre_cv.pdf")
+      )}
+      {Command == "cat cv" && prompt != "scordi/portfolio>" && (
+        <p>No such file</p>
+      )}
+
+                 
     </>
   );
 }

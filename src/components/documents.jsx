@@ -1,13 +1,17 @@
 import React from 'react';
 
 const Documents = () => {
-const documents = ["bio","education","projets","contacts",]
+const documents = ["bio","education","projets","contacts","cv"]
     return (
         <>
-        <ul>
+        <ul className='documents-container'>
         {documents.map((document, index) => (
             <div key={index}>
-              <li>{document}.txt</li>
+              {document == "cv"?<li className='document-item'>{document}.pdf *telecharger</li>
+              
+              :<li className='document-item'>{document}.txt</li>}
+              
+              
             </div>
           ))}
           </ul>

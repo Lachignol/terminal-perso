@@ -136,3 +136,76 @@ input:focus {
 .introduction-text{
   color: #35890e;
 }
+
+.image-panda{
+  display: none;
+}
+
+.introduction{
+  color: #35890e;
+
+}
+
+/* .bio{
+ 
+} */
+
+.projet-titre{
+  font-size: large;
+  color:#35890e;
+  margin-bottom: 1em;
+  
+}
+
+.projet-description{
+  color: blanchedalmond;
+  margin-bottom: 0.5em;
+}
+
+.projet-stack{
+  color:darkgreen;
+
+}
+
+.document-item{
+  color: blanchedalmond;
+  padding: 5px;
+
+}
+
+@media only screen and (min-width: 767px) {
+  .documents-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+    
+  }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+
+.image-name{
+  display: none;
+}
+
+.image-panda{
+  display:flex;
+}
+
+.separation{
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+
+
+
+}

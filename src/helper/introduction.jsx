@@ -1,14 +1,21 @@
 import React from 'react';
-import Name from "../assets/image-prompt-name.png"
+import name from "../assets/image-prompt-name.png"
+import panda from "../assets/image-prompt-panda.png"
 
 const Introduction = () => {
+const separation = "#######################################################################  "
     return (
         <>
+        <div className='introduction'>
         <div className='intro-container'>
-            <img src={Name}/>
+            <img className='image-panda' src={panda}/>
+            <img className="image-name"src={name}/>
             <small>©Mon Portfolio</small>
+
             </div>
-         <p className='introduction-text'>Tapez help pour voir les commandes disponibles:</p>   
+ <span className='separation'>{separation} </span>
+         <p className='introduction-text'>Tapez help pour voir les commandes disponibles:</p> 
+         </div>
         </>
     );
 };
