@@ -12,7 +12,8 @@ const downloadFile = (url, downloadName) => {
   link.download = downloadName;
   link.href = url;
   link.click();
-  link.remove();
+  link.parentNode.removeChild(link)
+  
 };
 
 
