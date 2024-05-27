@@ -44,6 +44,7 @@ function App() {
           }}
           onKeyDown={(e) => {
             if(e.key === "Tab"){
+              e.preventDefault()
               console.log("in tab")
               Autocomplete(input)?setInput(Autocomplete(input)):""
               

@@ -1,2 +1,5 @@
+rajouté composans des autres rubrique
+pas oublié d'ajouté tout les commande de ma fonction d'autocomplete
+et mise en forme !!!
 
-essayer de faire clignoter cursor
+* et idée de mettre un fichier caché trouvable avec un ls -a
