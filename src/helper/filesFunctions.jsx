@@ -88,7 +88,7 @@ function ShowCat({ output, command, input, prompt }) {
       {Command == "cat bio" && prompt != "scordi/portfolio>" && (
         <p className="wrong">No such file</p>
       )}
-       {Command == "cat cv" && prompt == "scordi/portfolio>" && (()=>
+       {Command == "cat cv" && prompt == "scordi/portfolio>" && (
         downloadFile("/ScordilisAlexandre.pdf", "Scordilis_Alexandre_cv.pdf")
       )}
       {Command == "cat cv" && prompt != "scordi/portfolio>" && (
