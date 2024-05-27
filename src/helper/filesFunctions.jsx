@@ -60,36 +60,36 @@ function ShowCat({ output, command, input, prompt }) {
         </>
       )}
 
-      {Command == "wrong" && <p>No such file </p>}
+      {Command == "wrong" && <p className="wrong">No such file </p>}
       {Command == "cat projets" && prompt == "scordi/portfolio>" && (
         <Projects />
       )}
       {Command == "cat projets" && prompt != "scordi/portfolio>" && (
-        <p>No such file</p>
+        <p className="wrong">No such file</p>
       )}
       {Command == "cat contacts" && prompt == "scordi/portfolio>" && (
         <Contacts />
       )}
       {Command == "cat contacts" && prompt != "scordi/portfolio>" && (
-        <p>No such file</p>
+        <p className="wrong">No such file</p>
       )}
        {Command == "cat education" && prompt == "scordi/portfolio>" && (
         <Education />
       )}
       {Command == "cat education" && prompt != "scordi/portfolio>" && (
-        <p>No such file</p>
+        <p className="wrong">No such file</p>
       )}
        {Command == "cat bio" && prompt == "scordi/portfolio>" && (
         <Bio />
       )}
       {Command == "cat bio" && prompt != "scordi/portfolio>" && (
-        <p>No such file</p>
+        <p className="wrong">No such file</p>
       )}
        {Command == "cat cv" && prompt == "scordi/portfolio>" && (
         downloadFile("/ScordilisAlexandre.pdf", "Scordilis_Alexandre_cv.pdf")
       )}
       {Command == "cat cv" && prompt != "scordi/portfolio>" && (
-        <p>No such file</p>
+        <p className="wrong">No such file</p>
       )}
 
                  

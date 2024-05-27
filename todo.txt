@@ -1,5 +1,5 @@
-rajouté composans des autres rubrique
-pas oublié d'ajouté tout les commande de ma fonction d'autocomplete
-et mise en forme !!!
+css : education , bio ,contact 
+css revoir les couleurs c'est pas trop ca .....
+
 
 * et idée de mettre un fichier caché trouvable avec un ls -a
