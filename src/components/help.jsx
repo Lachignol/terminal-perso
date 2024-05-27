@@ -12,7 +12,7 @@ const helps=[
  exempleSup:"cd .. (remonte d'un repertoire au dessus)"
 },
 {nomCmd:"ls",
- explication:"sert a lister les fichiers present dans le repertoire",
+ explication:"sert a lister les fichiers ou repertoire present dans le repertoire actuel",
  exemple:"ls",
  exempleSup:"ls -a (affiche aussi les fichiers caché)"
 },
