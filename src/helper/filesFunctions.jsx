@@ -9,10 +9,13 @@ import Bio from "../components/Bio";
 
 const downloadFile = (url, downloadName) => {
   const link = document.createElement("a");
+  document.body.appendChild(link);
+
   link.download = downloadName;
   link.href = url;
-  link.click();
-  link.parentNode.removeChild(link)
+  link.click(); 
+  document.body.removeChild(link);
+  
   
 };
 
