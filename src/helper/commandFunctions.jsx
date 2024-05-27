@@ -1,11 +1,12 @@
 import Documents from "../components/documents";
+import Help from "../components/help";
 
 
 
 export const switchCaseCommand = (input, output, prompt,) => {
     let newOutput;
   
-    let validCommand = ["ls", "pwd", "clear",""];
+    let validCommand = ["ls", "pwd", "clear","help",""];
   
     if (validCommand.includes(input.trim().toLowerCase())) {
       newOutput = (
@@ -39,7 +40,8 @@ export const switchCaseCommand = (input, output, prompt,) => {
             </div>
           </>
         )}
-  
+        {Command == "" && <p></p>}
+        {Command == "help" && <Help />}
         {Command == "ls" && prompt == "scordi/portfolio>" && <Documents />}
         {Command == "ls" && prompt == "scordi>" && <p>portfolio</p>}
         {Command == "pwd" && <p>{prompt.slice(0, prompt.length - 1)}</p>}

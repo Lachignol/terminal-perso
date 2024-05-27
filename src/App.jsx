@@ -9,7 +9,7 @@ import { switchCaseCommand } from "./helper/commandFunctions.jsx";
 function App() {
   const [prompt,setPrompt] = useState("scordi/portfolio>");
   const [input, setInput] = useState("");
-  const [output, setOutput] = useState("tape ls pour voir les fichiers dispo");
+  const [output, setOutput] = useState("tapez help pour voir les commandes disponibles");
   const inputRef = useRef("");
   const appRef = useRef("");
 

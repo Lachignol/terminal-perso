@@ -69,6 +69,7 @@ function ShowPath({ output, command, input, prompt }) {
           </div>
         </>
       )}
+      {Command == "cd portfolio" && prompt =="scordi/portfolio>" && <p>vous ête déja dans le repertoire</p>}
       {Command == "cd" && <p>svp entré un nom de repertoire</p>}
       {Command == "wrong" && (
         <p>No directory {input.trim().split(" ")[1]} find</p>
