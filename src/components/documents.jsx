@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Documents = () => {
-const documents = ["bio","education","projets"]
+const documents = ["bio","education","projets","contacts",]
     return (
         <>
         <ul>

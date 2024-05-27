@@ -1,4 +1,7 @@
 import Projects from "../components/projects";
+import Contacts from "../components/contact";
+import Education from "../components/education";
+import Apropos from "../components/apropos";
 
 
 
@@ -10,7 +13,7 @@ import Projects from "../components/projects";
 export const switchCaseCat = (input, output, prompt,) => {
   let newOutput;
 
-  let validCommand = ["cat projets"];
+  let validCommand = ["cat projets","cat contacts","cat education","cat bio"];
   console.log(input);
 
   if (validCommand.includes(input.trim().toLowerCase())) {
@@ -56,6 +59,24 @@ function ShowCat({ output, command, input, prompt }) {
         <Projects />
       )}
       {Command == "cat projets" && prompt != "scordi/portfolio>" && (
+        <p>No such file</p>
+      )}
+      {Command == "cat contacts" && prompt == "scordi/portfolio>" && (
+        <Contacts />
+      )}
+      {Command == "cat contacts" && prompt != "scordi/portfolio>" && (
+        <p>No such file</p>
+      )}
+       {Command == "cat education" && prompt == "scordi/portfolio>" && (
+        <Education />
+      )}
+      {Command == "cat education" && prompt != "scordi/portfolio>" && (
+        <p>No such file</p>
+      )}
+       {Command == "cat bio" && prompt == "scordi/portfolio>" && (
+        <Apropos />
+      )}
+      {Command == "cat bio" && prompt != "scordi/portfolio>" && (
         <p>No such file</p>
       )}
     </>

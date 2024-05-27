@@ -43,7 +43,7 @@ export const switchCaseCommand = (input, output, prompt,) => {
         {Command == "ls" && prompt == "scordi/portfolio>" && <Documents />}
         {Command == "ls" && prompt == "scordi>" && <p>portfolio</p>}
         {Command == "pwd" && <p>{prompt.slice(0, prompt.length - 1)}</p>}
-        {Command == "wrong" && <p>mauvaise commande</p>}
+        {Command == "wrong" && <p>mauvaise commande tapez help pour voir les commande disponibles ( crée un composant erreur pour moi)</p>}
       </>
     );
   }

@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: black;
+  
+  
 }
 
 @-webkit-keyframes cursor-blink {
@@ -84,6 +86,9 @@ ul {
 }
 
 input:focus {
+  /* cursor: url(./assets/cursor.cur), auto; */
+  caret-color: auto;
+  caret-shape:block;
   outline: none !important;
   scroll-behavior: auto;
 }
@@ -116,4 +121,5 @@ input:focus {
   outline: none;
   width: 100%;
 }
+
 
