@@ -2,7 +2,8 @@ import Projects from "../components/projects";
 import Contacts from "../components/contact";
 import Education from "../components/education";
 import Fichiersecret from "../components/fichiersecret";
-import Bio from "../components/Bio";
+import Bio from "../components/bio";
+
 
 
 
