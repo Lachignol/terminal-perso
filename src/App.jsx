@@ -50,13 +50,13 @@ function App() {
               Autocomplete(input) ? setInput(Autocomplete(input)) : "";
             }
             if (e.key === "Enter") {
-              if (input.trim().split(" ")[0] == "cd") {
+              if (input.toLocaleLowerCase().trim().split(" ")[0] == "cd") {
                 console.log(input.trim().split(" ")[0] == "cd");
 
                 setOutput(switchCasePath(input, output, prompt.toString()));
                 setPrompt(switchCaseSetPath(input, prompt));
                 setInput("");
-              } else if (input.trim().split(" ")[0] == "cat") {
+              } else if (input.toLocaleLowerCase().trim().split(" ")[0] == "cat") {
                 setOutput(switchCaseCat(input, output, prompt.toString()));
                 setInput("");
               } else

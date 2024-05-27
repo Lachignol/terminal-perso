@@ -7,7 +7,7 @@ const documents = ["bio","education","projets","contacts","cv"]
         <ul className='documents-container'>
         {documents.map((document, index) => (
             <div key={index}>
-              {document == "cv"?<li className='document-item'>{document}.pdf (telecharger)</li>
+              {document == "cv"?<li className='document-item'>{document}.pdf </li>
               
               :<li className='document-item'>{document}.txt</li>}
               

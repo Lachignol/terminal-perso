@@ -4,14 +4,23 @@ import Education from "../components/education";
 import Fichiersecret from "../components/fichiersecret";
 import Bio from "../components/Bio";
 
-
-
-
-
-export const switchCaseCat = (input, output, prompt,) => {
+export const switchCaseCat = (input, output, prompt) => {
   let newOutput;
 
-  let validCommand = ["cat projets","cat contacts","cat education","cat bio","cat cv","cat fichiersecret"];
+  let validCommand = [
+    "cat projets",
+    "cat projets.txt",
+    "cat contacts",
+    "cat contacts.txt",
+    "cat education",
+    "cat education.txt",
+    "cat bio",
+    "cat bio.txt",
+    "cat cv",
+    "cat cv.pdf",
+    "cat fichiersecret",
+    "cat fichiersecret.scrt",
+  ];
   console.log(input);
 
   if (validCommand.includes(input.trim().toLowerCase())) {
@@ -53,44 +62,40 @@ function ShowCat({ output, command, input, prompt }) {
       )}
 
       {Command == "wrong" && <p className="wrong">No such file </p>}
-      {Command == "cat projets" && prompt == "scordi/portfolio>" && (
-        <Projects />
-      )}
-      {Command == "cat projets" && prompt != "scordi/portfolio>" && (
-        <p className="wrong">No such file</p>
-      )}
-      {Command == "cat contacts" && prompt == "scordi/portfolio>" && (
-        <Contacts />
-      )}
-      {Command == "cat contacts" && prompt != "scordi/portfolio>" && (
-        <p className="wrong">No such file</p>
-      )}
-       {Command == "cat education" && prompt == "scordi/portfolio>" && (
-        <Education />
-      )}
-      {Command == "cat education" && prompt != "scordi/portfolio>" && (
-        <p className="wrong">No such file</p>
-      )}
-       {Command == "cat bio" && prompt == "scordi/portfolio>" && (
-        <Bio />
-      )}
-      {Command == "cat bio" && prompt != "scordi/portfolio>" && (
-        <p className="wrong">No such file</p>
-      )}
-       {Command == "cat cv" && prompt == "scordi/portfolio>" && (
-        <a href={"/ScordilisAlexandre.pdf"} download="Scordilis_Alexandre_cv.pdf"> télécharge mon cv </a>
-      )}
-      {Command == "cat cv" && prompt != "scordi/portfolio>" && (
-        <p className="wrong">No such file</p>
-      )}
-       {Command == "cat fichiersecret" && prompt == "scordi>" && (
-        <Fichiersecret />
-      )}
-      {Command == "cat fichiersecret" && prompt != "scordi>" && (
-        <p className="wrong">No such file</p>
-      )}
-
-                 
+      {(Command == "cat projets" || Command == "cat projets.txt") &&
+        prompt == "scordi/portfolio>" && <Projects />}
+      {(Command == "cat projets" || Command == "cat projets.txt") &&
+        prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
+      {(Command == "cat contacts" || Command == "cat contacts.txt") &&
+        prompt == "scordi/portfolio>" && <Contacts />}
+      {(Command == "cat contacts" || Command == "cat contacts.txt") &&
+        prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
+      {(Command == "cat education" || Command == "cat education.txt") &&
+        prompt == "scordi/portfolio>" && <Education />}
+      {(Command == "cat education" || Command == "cat education.txt") &&
+        prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
+      {(Command == "cat bio" || Command == "cat bio.txt") &&
+        prompt == "scordi/portfolio>" && <Bio />}
+      {(Command == "cat bio" || Command == "cat bio.txt") &&
+        prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
+      {(Command == "cat cv" || Command == "cat cv.pdf") &&
+        prompt == "scordi/portfolio>" && (
+          <a
+            href={"/ScordilisAlexandre.pdf"}
+            download="Scordilis_Alexandre_cv.pdf"
+          >
+            {" "}
+            télécharge mon cv{" "}
+          </a>
+        )}
+      {(Command == "cat cv" || Command == "cat cv.pdf") &&
+        prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
+      {(Command == "cat fichiersecret" ||
+        Command == "cat fichiersecret.scrt") &&
+        prompt == "scordi>" && <Fichiersecret />}
+      {(Command == "cat fichiersecret" ||
+        Command == "cat fichiersecret.scrt") &&
+        prompt != "scordi>" && <p className="wrong">No such file</p>}
     </>
   );
 }
