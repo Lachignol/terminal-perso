@@ -7,20 +7,6 @@ import Bio from "../components/Bio";
 
 
 
-const downloadFile = (url, downloadName) => {
-  const link = document.createElement("a");
-  document.body.appendChild(link);
-
-  link.download = downloadName;
-  link.href = url;
-  link.click(); 
-  document.body.removeChild(link);
-  
-  
-};
-
-
-
 
 export const switchCaseCat = (input, output, prompt,) => {
   let newOutput;
@@ -92,7 +78,7 @@ function ShowCat({ output, command, input, prompt }) {
         <p className="wrong">No such file</p>
       )}
        {Command == "cat cv" && prompt == "scordi/portfolio>" && (
-        downloadFile("/ScordilisAlexandre.pdf", "Scordilis_Alexandre_cv.pdf")
+        <a href={"/ScordilisAlexandre.pdf"} download="Scordilis_Alexandre_cv.pdf"> télécharge mon cv </a>
       )}
       {Command == "cat cv" && prompt != "scordi/portfolio>" && (
         <p className="wrong">No such file</p>
