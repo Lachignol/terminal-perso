@@ -62,7 +62,7 @@ const Projects = () => {
       <ul>
         {projects.map((project, index) => (
           <div key={index}>
-            <h4 className="projet-titre">--{project.titre}--</h4>
+            <h5 className="projet-titre">--{project.titre}--</h5>
             <li className="projet-description">{project.description}</li>
             <li className="projet-stack">stack:{project.stack}</li>
             <li>

@@ -43,7 +43,7 @@ const Help = () => {
       <ul>
         {helps.map((help, index) => (
           <div key={index}>
-            <h4 className="help-titre-commande">--{help.nomCmd}--</h4>
+            <h5 className="help-titre-commande">--{help.nomCmd}--</h5>
             <br />
             <li className="help-explication">Explication:{help.explication}</li>
             <li className="help-exemple">Exemple:{help.exemple}</li>
