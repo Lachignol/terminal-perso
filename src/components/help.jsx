@@ -3,17 +3,6 @@ import React from "react";
 const Help = () => {
   const helps = [
     {
-      nomCmd: "touche tab",
-      explication: "Appliquer l'autocomplétion",
-      exemple:"Tapez sur la touche tabulation du clavier",
-    },
-    {
-      nomCmd: "cd",
-      explication: "Changer de repertoire",
-      exemple: "cd <nom du repertoire>",
-      exempleSup: "Pour remonter d'un repertoire au dessus tapez :cd .. ",
-    },
-    {
       nomCmd: "ls",
       explication:
         "Lister les fichiers ou repertoire present dans le repertoire actuel",
@@ -24,6 +13,17 @@ const Help = () => {
       nomCmd: "cat",
       explication: "Ouvrir un fichier present dans le repertoire",
       exemple: "cat <nom du fichier>",
+    },
+    {
+      nomCmd: "touche tab",
+      explication: "Appliquer l'autocomplétion",
+      exemple:"Tapez sur la touche tabulation du clavier",
+    },
+    {
+      nomCmd: "cd",
+      explication: "Changer de repertoire",
+      exemple: "cd <nom du repertoire>",
+      exempleSup: "Pour remonter d'un repertoire au dessus tapez :cd .. ",
     },
     {
       nomCmd: "pwd",
