@@ -74,15 +74,11 @@ body {
 
 .copyright {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .introduction-text {
   color: #03a64a;
-}
-
-.image-panda {
-  display: none;
 }
 
 .introduction {
@@ -235,16 +231,23 @@ input:focus {
 
 @media only screen and (max-width: 767px) {
   .image-name {
+    max-width: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .copyright {
     display: none;
   }
 
-  .image-panda {
+  /* .image-panda {
     display: flex;
-  }
+  } */
 
-  .separation {
+  /* .separation {
     display: none;
-  }
+  } */
 
   ul {
     list-style: none;

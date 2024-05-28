@@ -5,7 +5,8 @@ import { Autocomplete } from "./helper/autocomplete.jsx";
 import { switchCasePath, switchCaseSetPath } from "./helper/pathFunctions.jsx";
 import { switchCaseCat } from "./helper/filesFunctions.jsx";
 import { switchCaseCommand } from "./helper/commandFunctions.jsx";
-import Introduction from "./helper/introduction.jsx";
+import Introduction from "./components/introduction.jsx";
+
 
 function App() {
   const inputRef = useRef("");
