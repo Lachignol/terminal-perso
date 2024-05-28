@@ -71,7 +71,7 @@ function ShowPath({ output, command, input, prompt }) {
       {Command == "cd portfolio" && prompt =="scordi/portfolio>" && <p className="wrong">vous ête déja dans ce repertoire</p>}
       {Command == "cd" && <p className="wrong">nom de repertoire invalide</p>}
       {Command == "wrong" && (
-        <p className="wrong">No directory {input.trim().split(" ")[1]} find</p>
+        <p className="wrong">le repertoire {input.trim().split(" ")[1]} est introuvable</p>
       )}
     </>
   );
