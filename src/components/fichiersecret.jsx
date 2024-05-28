@@ -7,7 +7,7 @@ const Fichiersecret = () => {
     <div>
       <h4 className="secret-titre">--Fichier caché !--</h4>
       <img className='image-fichier-caché' src={photo}/>
-      <p className="secret-content">Felicitation!</p>
+      <p className="secret-content">Félicitation!</p>
     </div>
   );
 };

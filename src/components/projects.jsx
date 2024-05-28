@@ -64,7 +64,7 @@ const Projects = () => {
           <div key={index}>
             <h4 className="projet-titre">--{project.titre}--</h4>
             <li className="projet-description">{project.description}</li>
-            <li className="projet-stack">stack:{project.stack}</li>
+            <li className="projet-stack">Stack:{project.stack}</li>
             <li>
               <a href={project.lienGit} target="_blank">
                 lien github
