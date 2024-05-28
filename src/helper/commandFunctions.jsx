@@ -49,7 +49,7 @@ function ShowCommand({ output, command, input, prompt }) {
         <p className="document-item">Portfolio</p>
       )}
       {Command == "pwd" && (
-        <p className="pwd-result">path:{prompt.slice(0, prompt.length - 1)}</p>
+        <p className="pwd-result">Path:{prompt.slice(0, prompt.length - 1)}</p>
       )}
       {Command == "ls -a" && prompt == "scordi/portfolio>" && <Documents />}
       {Command == "ls -a" && prompt == "scordi>" && (
@@ -58,7 +58,7 @@ function ShowCommand({ output, command, input, prompt }) {
           <p className="document-item">fichiersecret.scrt</p>
         </>
       )}
-      {Command == "wrong" && <p className="wrong">tapez help</p>}
+      {Command == "wrong" && <p className="wrong">Tapez help</p>}
     </>
   );
 }
