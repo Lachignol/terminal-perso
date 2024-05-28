@@ -65,6 +65,9 @@ body {
   margin-bottom: 0.75em;
 }
 
+
+
+
 .intro-container {
   display: flex;
   justify-content: center;
@@ -75,6 +78,7 @@ body {
 .copyright{
   display: flex;
   align-items: self-end;
+  justify-items:flex-end;
   
 }
 
