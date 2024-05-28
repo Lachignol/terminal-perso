@@ -1,5 +1,1 @@
-
-
-
-
-* remplir le fichier secret avec un truc interessant
+Crée un historique de commande tapez avec fleche haut et bas suivant / précédent
