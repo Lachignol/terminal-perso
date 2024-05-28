@@ -14,8 +14,9 @@ const separation = "############################################################
            
 
             </div>
-            <small className='copyright'>©Mon Portfolio</small>
+          
  <span className='separation'>{separation} </span>
+ <small className='copyright'>©Mon Portfolio</small>
          <p className='introduction-text'>Tapez help pour voir les commandes disponibles:</p> 
          </div>
         </>
