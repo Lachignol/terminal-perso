@@ -231,9 +231,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 767px) {
- .body{
-  overflow-x: hidden;
- }
+ 
   .image-name {
     max-width: 100%;
   }
@@ -246,9 +244,9 @@ input:focus {
     display: flex;
   } */
 
-  /* .separation {
-    display: none;
-  } */
+  .separation {
+    overflow-x: hidden;
+  }
 
   ul {
     list-style: none;
