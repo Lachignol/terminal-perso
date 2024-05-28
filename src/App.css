@@ -52,7 +52,7 @@ body {
 }
 
 .App {
-  color:#03A64A;
+  color: #03a64a;
   display: block;
   font-family: "AndaleMono", monospace;
   margin-top: 1em;
@@ -65,25 +65,20 @@ body {
   margin-bottom: 0.75em;
 }
 
-
-
-
 .intro-container {
   display: flex;
   justify-content: center;
-  color:#03A64A;
+  color: #03a64a;
   width: 100%;
 }
 
-.copyright{
+.copyright {
   display: flex;
-  align-items: self-end;
-  justify-items:flex-end;
-  
+  justify-content: flex-end;
 }
 
 .introduction-text {
-  color:#03A64A;
+  color: #03a64a;
 }
 
 .image-panda {
@@ -91,13 +86,11 @@ body {
 }
 
 .introduction {
-  color:#03A64A;
+  color: #03a64a;
 }
 
-
-
 a {
-  color: #03A64A;
+  color: #03a64a;
   text-decoration: none;
   -webkit-animation: cursor-blink 1.5s steps(1) infinite;
   -moz-animation: cursor-blink 1.5s steps(1) infinite;
@@ -144,7 +137,7 @@ input:focus {
   white-space: pre-wrap;
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
-  color:blanchedalmond;
+  color: blanchedalmond;
   background: transparent;
   border: 0px;
   outline: none;
@@ -152,25 +145,25 @@ input:focus {
 }
 
 .education-titre {
-  color: #03A64A;
+  color: #03a64a;
 }
 
 .education-description {
-  color:blanchedalmond;
+  color: blanchedalmond;
 }
 
 .projet-titre {
-  color: #03A64A;
+  color: #03a64a;
   margin-bottom: 1em;
 }
 
 .projet-description {
-  color:blanchedalmond;
+  color: blanchedalmond;
   margin-bottom: 0.5em;
 }
 
 .projet-stack {
-  color:blanchedalmond;
+  color: blanchedalmond;
 }
 
 .document-item {
@@ -179,29 +172,27 @@ input:focus {
 }
 
 .contact-titre {
-  color: #03A64A;
+  color: #03a64a;
 }
 
-.contact-lien{
-  color:blanchedalmond;
+.contact-lien {
+  color: blanchedalmond;
 }
 
-.bio-titre{
-  color:#03A64A;
- 
+.bio-titre {
+  color: #03a64a;
 }
 
 .bio-content {
-  color:blanchedalmond;
-  
+  color: blanchedalmond;
 }
 
 .pwd-result {
-  color: #03A64A;
+  color: #03a64a;
 }
 
-.secret-titre{
-  color: #03A64A;
+.secret-titre {
+  color: #03a64a;
 }
 
 .secret-content {
@@ -209,19 +200,18 @@ input:focus {
 }
 
 .help-titre-commande {
-  color: #03A64A;
+  color: #03a64a;
 }
 
 .help-explication {
-  color:blanchedalmond;
+  color: blanchedalmond;
 }
 
 .help-exemple {
   color: #a6afa5;
-
 }
 
-.cv-lien{
+.cv-lien {
   color: blanchedalmond;
 }
 
