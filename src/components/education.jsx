@@ -20,7 +20,7 @@ const Education = () => {
       <ul>
         {educations.map((education, index) => (
           <div key={index}>
-            <h5 className="education-titre">{education.année}</h5>
+            <h4 className="education-titre">{education.année}</h4>
             <br />
             <li className="education-description">{education.description}</li>
             <br />

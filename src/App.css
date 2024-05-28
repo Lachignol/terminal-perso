@@ -103,7 +103,6 @@ input:focus {
 
 .terminal-input {
   border: none;
-  color: #1ff042;
   background-color: black;
   display: inline-block;
   font-family: "AndaleMono", monospace;
@@ -113,7 +112,7 @@ input:focus {
   white-space: pre-wrap;
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
-  color: rgb(190, 177, 157);
+  color: rgb(227, 224, 214);
   background: transparent;
   border: 0px;
   outline: none;
@@ -147,7 +146,6 @@ input:focus {
 }
 
 .projet-titre {
-  font-size: large;
   color: blanchedalmond;
   margin-bottom: 1em;
 }
@@ -170,6 +168,10 @@ input:focus {
   color: blanchedalmond;
 }
 
+.contact-lien{
+  color: #35890e;
+}
+
 .bio-titre{
   color:blanchedalmond
 }
@@ -181,11 +183,6 @@ input:focus {
 .pwd-result {
   color: blanchedalmond;
 }
-
-.wrong {
-  color: rgb(230, 173, 102);
-}
-
 
 .secret-titre{
   color: blanchedalmond;
@@ -205,6 +202,10 @@ input:focus {
 
 .help-exemple {
   color: #35890e;
+}
+
+.wrong {
+  color: rgb(241, 41, 14);
 }
 
 @media only screen and (min-width: 767px) {

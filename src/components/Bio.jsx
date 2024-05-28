@@ -3,7 +3,7 @@ import React from "react";
 const Bio = () => {
   return (
     <>
-    <h5 className="bio-titre">--Biographie--</h5>
+    <h4 className="bio-titre">--Biographie--</h4>
       <p className="bio-content">
         Actuellement inscrit en formation de développeur web à l'école Ada Tech
         School,je suis à la recherche d'une alternance avec un rythme prévu de
