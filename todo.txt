@@ -1,6 +1,4 @@
-css : education , bio ,contact 
-css revoir les couleurs c'est pas trop ca ..... 
-chercher des palettes coherante sur le net
+
 
 
 

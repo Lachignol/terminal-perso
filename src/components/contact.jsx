@@ -24,12 +24,12 @@ const Contacts = () => {
           <div key={index}>
             {contact.platform == "Mail" ? (
               <>
-                <li className="contact-titre">{contact.platform}</li>
+                <h3 className="contact-titre">--{contact.platform}--</h3>
                 <a href={`mailto:${contact.lien}`}>{contact.lien}</a>
               </>
             ) : (
               <>
-                <li className="contact-titre">{contact.platform}</li>
+                <h3 className="contact-titre">--{contact.platform}--</h3>
                 <li>
                   <a href={contact.lien} target="_blank">
                     Voici le lien

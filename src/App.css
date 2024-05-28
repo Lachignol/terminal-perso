@@ -170,7 +170,11 @@ input:focus {
   color: blanchedalmond;
 }
 
-.bio {
+.bio-titre{
+  color:blanchedalmond
+}
+
+.bio-content {
   color: #35890e;
 }
 
@@ -182,7 +186,12 @@ input:focus {
   color: rgb(230, 173, 102);
 }
 
-.contenu-secret {
+
+.secret-titre{
+  color: blanchedalmond;
+}
+
+.secret-content {
   color: darkgoldenrod;
 }
 
