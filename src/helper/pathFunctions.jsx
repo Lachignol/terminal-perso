@@ -6,7 +6,7 @@ export const switchCaseSetPath = (input, prompt) => {
   let validPath = ["portfolio", ".."];
 
   if (validPath.includes(commandWithoutCd.toLowerCase())) {
-    if (commandWithoutCd == "portfolio" && prompt != "scordi/portfolio>")
+    if ((commandWithoutCd == "portfolio" || commandWithoutCd == "Portfolio") && prompt != "scordi/portfolio>")
       newPrompt = `${prompt.slice(0, prompt.length - 1)}/portfolio>`;
     else {
       newPrompt = prompt;
@@ -69,7 +69,7 @@ function ShowPath({ output, command, input, prompt }) {
         </>
       )}
       {Command == "cd portfolio" && prompt =="scordi/portfolio>" && <p className="wrong">vous ête déja dans ce repertoire</p>}
-      {Command == "cd" && <p className="wrong">entré un nom de repertoire</p>}
+      {Command == "cd" && <p className="wrong">nom de repertoire invalide</p>}
       {Command == "wrong" && (
         <p className="wrong">No directory {input.trim().split(" ")[1]} find</p>
       )}
