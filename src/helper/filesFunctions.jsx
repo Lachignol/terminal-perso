@@ -79,7 +79,7 @@ function ShowCat({ output, command, input, prompt }) {
         prompt != "scordi/portfolio>" && <p className="wrong">No such file</p>}
       {(Command == "cat cv" || Command == "cat cv.pdf") &&
         prompt == "scordi/portfolio>" && (
-          <a
+          <a className="cv-lien"
             href={"/ScordilisAlexandre.pdf"}
             download="Scordilis_Alexandre_cv.pdf"
           >

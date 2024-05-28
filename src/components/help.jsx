@@ -3,37 +3,36 @@ import React from "react";
 const Help = () => {
   const helps = [
     {
-      nomCmd: "frappé la touche tab",
-      explication: "sert a appliquer l'autocomplétion",
-      exemple:
-        "il suffit seulement de commencer a ecrire ce que l'on veu et appuyer sur la touche tab du clavier",
+      nomCmd: "touche tab",
+      explication: "Appliquer l'autocomplétion",
+      exemple:"Tapez sur la touche tabulation du clavier",
     },
     {
       nomCmd: "cd",
-      explication: "sert a changer de repertoire",
+      explication: "Changer de repertoire",
       exemple: "cd <nom du repertoire>",
-      exempleSup: "cd .. (remonte d'un repertoire au dessus)",
+      exempleSup: "Pour remonter d'un repertoire au dessus tapez :cd .. ",
     },
     {
       nomCmd: "ls",
       explication:
-        "sert a lister les fichiers ou repertoire present dans le repertoire actuel",
+        "Lister les fichiers ou repertoire present dans le repertoire actuel",
       exemple: "ls",
-      exempleSup: "ls -a (affiche aussi les fichiers caché)",
+      exempleSup: "Pour afficher les fichiers caché tapez:ls -a ",
     },
     {
       nomCmd: "cat",
-      explication: "sert a ouvrir un fichier present dans le repertoire",
+      explication: "Ouvrir un fichier present dans le repertoire",
       exemple: "cat <nom du fichier>",
     },
     {
       nomCmd: "pwd",
-      explication: "sert a afficher le repertoire courant",
+      explication: "Afficher le repertoire courant",
       exemple: "pwd",
     },
     {
       nomCmd: "clear",
-      explication: "sert a vider le terminal",
+      explication: "Vider le terminal",
       exemple: "clear",
     },
   ];
@@ -46,8 +45,10 @@ const Help = () => {
             <h4 className="help-titre-commande">--{help.nomCmd}--</h4>
             <br />
             <li className="help-explication">Explication:{help.explication}</li>
-            <li className="help-exemple">Exemple:{help.exemple}</li>
-            {help.exempleSup && <li className="help-exemple">Info suplémentaire:{help.exempleSup}</li>}
+            <br />
+            <li className="help-exemple">tapez:{help.exemple}</li>
+            <br />
+            {help.exempleSup && <li className="help-exemple">{help.exempleSup}</li>}
             <br />
           </div>
         ))}

@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: black;
+  overflow-x: hidden;
 }
 
 @-webkit-keyframes cursor-blink {
@@ -51,7 +52,7 @@ body {
 }
 
 .App {
-  color: #1ff042;
+  color:#03A64A;
   display: block;
   font-family: "AndaleMono", monospace;
   margin-top: 1em;
@@ -64,8 +65,35 @@ body {
   margin-bottom: 0.75em;
 }
 
+.intro-container {
+  display: flex;
+  justify-content: center;
+  color:#03A64A;
+  width: 100%;
+}
+
+.copyright{
+  display: flex;
+  align-items: self-end;
+  
+}
+
+.introduction-text {
+  color:#03A64A;
+}
+
+.image-panda {
+  display: none;
+}
+
+.introduction {
+  color:#03A64A;
+}
+
+
+
 a {
-  color: white;
+  color: #03A64A;
   text-decoration: none;
   -webkit-animation: cursor-blink 1.5s steps(1) infinite;
   -moz-animation: cursor-blink 1.5s steps(1) infinite;
@@ -119,44 +147,26 @@ input:focus {
   width: 100%;
 }
 
-.intro-container {
-  display: inline-block;
-  color: #35890e;
-  width: 100%;
-}
-
-.introduction-text {
-  color: #35890e;
-}
-
-.image-panda {
-  display: none;
-}
-
-.introduction {
-  color: #35890e;
-}
-
 .education-titre {
-  color: blanchedalmond;
+  color: #03A64A;
 }
 
 .education-description {
-  color: #35890e;
+  color:blanchedalmond;
 }
 
 .projet-titre {
-  color: blanchedalmond;
+  color: #03A64A;
   margin-bottom: 1em;
 }
 
 .projet-description {
-  color: #35890e;
+  color:blanchedalmond;
   margin-bottom: 0.5em;
 }
 
 .projet-stack {
-  color: #35890e;
+  color:blanchedalmond;
 }
 
 .document-item {
@@ -165,27 +175,29 @@ input:focus {
 }
 
 .contact-titre {
-  color: blanchedalmond;
+  color: #03A64A;
 }
 
 .contact-lien{
-  color: #35890e;
+  color:blanchedalmond;
 }
 
 .bio-titre{
-  color:blanchedalmond
+  color:#03A64A;
+ 
 }
 
 .bio-content {
-  color: #35890e;
+  color:blanchedalmond;
+  
 }
 
 .pwd-result {
-  color: blanchedalmond;
+  color: #03A64A;
 }
 
 .secret-titre{
-  color: blanchedalmond;
+  color: #03A64A;
 }
 
 .secret-content {
@@ -193,15 +205,20 @@ input:focus {
 }
 
 .help-titre-commande {
-  color: blanchedalmond;
+  color: #03A64A;
 }
 
 .help-explication {
-  color: #35890e;
+  color:blanchedalmond;
 }
 
 .help-exemple {
-  color: #35890e;
+  color: #a6afa5;
+
+}
+
+.cv-lien{
+  color: blanchedalmond;
 }
 
 .wrong {
