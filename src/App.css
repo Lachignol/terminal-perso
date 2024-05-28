@@ -74,12 +74,13 @@ body {
 
 .copyright {
   display: flex;
-  justify-content: flex-end;
+  justify-content:flex-end;
 }
 
 .introduction-text {
   color: #03a64a;
 }
+
 
 .introduction {
   color: #03a64a;
@@ -233,12 +234,12 @@ input:focus {
   .image-name {
     max-width: 100%;
     width: auto;
-    object-fit: cover;
-    object-position: center;
+   
+   
   }
 
-  .copyright {
-    display: none;
+  .copyright{
+    display: none
   }
 
   /* .image-panda {
