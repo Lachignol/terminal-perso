@@ -13,7 +13,7 @@ const Introduction = () => {
         </div>
 
         <span className="separation">{separation} </span>
-        <small className="copyright">©Mon Portfolio</small>
+        <small className="copyright">©Mon Portfolio.</small>
         <p className="introduction-text">
           Tapez help pour voir les commandes disponibles:
         </p>

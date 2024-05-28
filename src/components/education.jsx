@@ -11,7 +11,7 @@ const Education = () => {
     {
       année: "--2023--  à --aujourd'hui--",
       description:
-        "Formation Ada tech school concepteur développeur d'applications-Bac+3,RNCP niveau IV (9 mois de formation et 12 mois d'alternance)",
+        "Formation Ada tech school concepteur développeur d'applications-Bac+3,RNCP niveau IV (9 mois de formation et 12 mois d'alternance).",
     },
   ];
 

@@ -42,7 +42,7 @@ const Projects = () => {
     {
       titre: "Jouvence",
       description:
-        "Extension permetant de traduire une page web en langage de 'jeunes'",
+        "Extension permetant de traduire une page web en langage de 'jeunes'.",
       stack: "Html-Css-Javascript.",
       lienGit: "https://github.com/Lachignol/Extension-navigateur",
       lienActif: "",
