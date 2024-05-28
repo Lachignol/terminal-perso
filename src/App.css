@@ -245,7 +245,7 @@ input:focus {
   } */
 
   .separation {
-    overflow-x: hidden;
+    display:none;
   }
 
   ul {
