@@ -1,4 +1,4 @@
-var possibleValues = ["ls","cd","pwd","help","clear","cat projets","cat cv","cat contacts","cat education","cat bio","cd portfolio","cd .."];
+var possibleValues = ["ls","cd","pwd","help","cat projets","cat cv","cat contacts","cat education","cat bio","cd portfolio","cd ..","clear"];
 
 
 export function Autocomplete(input) {
