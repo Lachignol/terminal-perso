@@ -6,7 +6,10 @@ export const switchCaseSetPath = (input, prompt) => {
   let validPath = ["portfolio", ".."];
 
   if (validPath.includes(commandWithoutCd.toLowerCase())) {
-    if ((commandWithoutCd == "portfolio" || commandWithoutCd == "Portfolio") && prompt != "scordi/portfolio>")
+    if (
+      (commandWithoutCd == "portfolio" || commandWithoutCd == "Portfolio") &&
+      prompt != "scordi/portfolio>"
+    )
       newPrompt = `${prompt.slice(0, prompt.length - 1)}/portfolio>`;
     else {
       newPrompt = prompt;
@@ -59,19 +62,21 @@ function ShowPath({ output, command, input, prompt }) {
   let Command = command;
   return (
     <>
-      {Command != "clear" && (
-        <>
-          <div>{output}</div>
-          <div className="terminal-input-area">
-            <span className="terminal-prompt">{prompt}</span>
-            <p className="terminal-input">{input}</p>
-          </div>
-        </>
+      <>
+        <div>{output}</div>
+        <div className="terminal-input-area">
+          <span className="terminal-prompt">{prompt}</span>
+          <p className="terminal-input">{input}</p>
+        </div>
+      </>
+      {Command == "cd portfolio" && prompt == "scordi/portfolio>" && (
+        <p className="wrong">Vous ête déja dans ce répertoire</p>
       )}
-      {Command == "cd portfolio" && prompt =="scordi/portfolio>" && <p className="wrong">Vous ête déja dans ce répertoire</p>}
       {Command == "cd" && <p className="wrong">Nom de répertoire invalide</p>}
       {Command == "wrong" && (
-        <p className="wrong">Le répertoire {input.trim().split(" ")[1]} est introuvable</p>
+        <p className="wrong">
+          Le répertoire {input.trim().split(" ")[1]} est introuvable
+        </p>
       )}
     </>
   );

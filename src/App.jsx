@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App" ref={appRef} onClick={() => inputRef.current.focus()}>
-      <div className="terminal">{output} </div>
+      <div className="terminal">{output}</div>
 
       <div className="terminal-input-area">
         <span className="terminal-prompt">{prompt}</span>
@@ -69,6 +69,10 @@ function App() {
               ) {
                 setOutput(switchCaseCat(input, output, prompt.toString()));
                 setInput("");
+              } else if (
+                input.toLocaleLowerCase().trim().split(" ")[0] == "clear"
+              ) {
+                setOutput(<Introduction />);
               } else
                 setOutput(switchCaseCommand(input, output, prompt.toString()));
               setInput("");

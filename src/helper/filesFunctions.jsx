@@ -21,7 +21,6 @@ export const switchCaseCat = (input, output, prompt) => {
     "cat fichiersecret",
     "cat fichiersecret.scrt",
   ];
-  
 
   if (validCommand.includes(input.trim().toLowerCase())) {
     newOutput = (
@@ -50,36 +49,44 @@ function ShowCat({ output, command, input, prompt }) {
   let Command = command;
   return (
     <>
-      {Command != "clear" && (
-        <>
-          <div>{output}</div>
-          <div className="terminal-input-area">
-            <span className="terminal-prompt">{prompt}</span>
-            <p className="terminal-input">{input}</p>
-          </div>
-        </>
+      <>
+        <div>{output}</div>
+        <div className="terminal-input-area">
+          <span className="terminal-prompt">{prompt}</span>
+          <p className="terminal-input">{input}</p>
+        </div>
+      </>
+      {Command == "wrong" && (
+        <p className="wrong">Aucun fichier trouvé à ce nom</p>
       )}
-
-      {Command == "wrong" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
       {(Command == "cat projets" || Command == "cat projets.txt") &&
         prompt == "scordi/portfolio>" && <Projects />}
       {(Command == "cat projets" || Command == "cat projets.txt") &&
-        prompt != "scordi/portfolio>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi/portfolio>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
       {(Command == "cat contacts" || Command == "cat contacts.txt") &&
         prompt == "scordi/portfolio>" && <Contacts />}
       {(Command == "cat contacts" || Command == "cat contacts.txt") &&
-        prompt != "scordi/portfolio>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi/portfolio>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
       {(Command == "cat education" || Command == "cat education.txt") &&
         prompt == "scordi/portfolio>" && <Education />}
       {(Command == "cat education" || Command == "cat education.txt") &&
-        prompt != "scordi/portfolio>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi/portfolio>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
       {(Command == "cat bio" || Command == "cat bio.txt") &&
         prompt == "scordi/portfolio>" && <Bio />}
       {(Command == "cat bio" || Command == "cat bio.txt") &&
-        prompt != "scordi/portfolio>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi/portfolio>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
       {(Command == "cat cv" || Command == "cat cv.pdf") &&
         prompt == "scordi/portfolio>" && (
-          <a className="cv-lien"
+          <a
+            className="cv-lien"
             href={"/ScordilisAlexandre.pdf"}
             download="Scordilis_Alexandre_cv.pdf"
           >
@@ -88,13 +95,17 @@ function ShowCat({ output, command, input, prompt }) {
           </a>
         )}
       {(Command == "cat cv" || Command == "cat cv.pdf") &&
-        prompt != "scordi/portfolio>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi/portfolio>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
       {(Command == "cat fichiersecret" ||
         Command == "cat fichiersecret.scrt") &&
         prompt == "scordi>" && <Fichiersecret />}
       {(Command == "cat fichiersecret" ||
         Command == "cat fichiersecret.scrt") &&
-        prompt != "scordi>" && <p className="wrong">Aucun fichier trouvé à ce nom</p>}
+        prompt != "scordi>" && (
+          <p className="wrong">Aucun fichier trouvé à ce nom</p>
+        )}
     </>
   );
 }

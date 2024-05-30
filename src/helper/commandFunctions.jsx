@@ -33,15 +33,13 @@ function ShowCommand({ output, command, input, prompt }) {
   let Command = command;
   return (
     <>
-      {Command != "clear" && (
-        <>
-          <div>{output}</div>
-          <div className="terminal-input-area">
-            <span className="terminal-prompt">{prompt}</span>
-            <p className="terminal-input">{input}</p>
-          </div>
-        </>
-      )}
+      <>
+        <div>{output}</div>
+        <div className="terminal-input-area">
+          <span className="terminal-prompt">{prompt}</span>
+          <p className="terminal-input">{input}</p>
+        </div>
+      </>
       {Command == "" && <p></p>}
       {Command == "help" && <Help />}
       {Command == "ls" && prompt == "scordi/portfolio>" && <Documents />}
