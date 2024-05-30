@@ -15,15 +15,29 @@ const Help = () => {
       exemple: "cat <nom du fichier>",
     },
     {
-      nomCmd: "touche tab",
-      explication: "Appliquer l'autocomplétion.",
-      exemple:"Tapez sur la touche tabulation du clavier",
-    },
-    {
       nomCmd: "cd",
       explication: "Changer de repertoire.",
       exemple: "cd <nom du repertoire>",
       exempleSup: "Pour remonter d'un repertoire au dessus tapez :cd .. ",
+    },
+    {
+      nomCmd: "touche tab",
+      explication: "Appliquer l'autocomplétion.",
+      exemple: "Tapez sur la touche tabulation du clavier",
+    },
+    {
+      nomCmd: "touche flèche du haut",
+      explication: "Permet de récupérer les commandes tapées précédemment.",
+      exemple:
+        "Tapez sur la fleche du haut pour remonter dans votre historique de commandes",
+    },
+    {
+      nomCmd: "touche flèche du bas",
+      explication: "Permet de récupérer les commandes tapées ultérieurement.",
+      exemple:
+        "Tapez sur la fleche du bas pour redescendre dans votre historique de commandes",
+      exempleSup:
+        "Vous pouvez redescendre jusqu'à la commande que vous étiez en train d'écrire",
     },
     {
       nomCmd: "pwd",
@@ -48,7 +62,9 @@ const Help = () => {
             <br />
             <li className="help-exemple">Tapez:{help.exemple}</li>
             <br />
-            {help.exempleSup && <li className="help-exemple">{help.exempleSup}</li>}
+            {help.exempleSup && (
+              <li className="help-exemple">{help.exempleSup}</li>
+            )}
             <br />
           </div>
         ))}
