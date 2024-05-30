@@ -7,13 +7,15 @@ import { switchCaseCat } from "./helper/filesFunctions.jsx";
 import { switchCaseCommand } from "./helper/commandFunctions.jsx";
 import Introduction from "./components/introduction.jsx";
 
-
 function App() {
   const inputRef = useRef("");
   const appRef = useRef("");
   const [prompt, setPrompt] = useState("scordi/portfolio>");
   const [input, setInput] = useState("");
   const [output, setOutput] = useState(<Introduction />);
+  const [histoInput, setHistoInput] = useState([]);
+  const [histoInputIdx, setHistoInputIdx] = useState();
+  const [tempInput, setTempInput] = useState();
 
   useEffect(() => {
     inputRef.current.focus();
@@ -22,6 +24,17 @@ function App() {
 
   const scrollToBottom = (ref) => {
     ref.current?.scrollIntoView({ block: "end", behavior: "smooth" });
+  };
+
+  const handleHistoInput = (currentInput) => {
+    if (currentInput != "") {
+      setHistoInput((prev) =>
+        prev ? [...prev, currentInput] : [currentInput]
+      );
+      setHistoInputIdx(histoInput.length);
+    } else {
+      return;
+    }
   };
 
   return (
@@ -37,6 +50,7 @@ function App() {
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
+            setTempInput(e.target.value);
           }}
           onKeyDown={(e) => {
             if (e.key === "Tab") {
@@ -45,6 +59,7 @@ function App() {
               Autocomplete(input) ? setInput(Autocomplete(input)) : "";
             }
             if (e.key === "Enter") {
+              handleHistoInput(input);
               if (input.toLocaleLowerCase().trim().split(" ")[0] == "cd") {
                 setOutput(switchCasePath(input, output, prompt.toString()));
                 setPrompt(switchCaseSetPath(input, prompt));
@@ -57,6 +72,29 @@ function App() {
               } else
                 setOutput(switchCaseCommand(input, output, prompt.toString()));
               setInput("");
+            }
+            if (e.key === "ArrowUp") {
+              if (histoInputIdx == null) {
+                return;
+              } else {
+                setInput(histoInput[histoInputIdx]);
+                let newHistoInputIdx =
+                  histoInputIdx - 1 < 0 ? histoInputIdx : histoInputIdx - 1;
+                setHistoInputIdx(newHistoInputIdx);
+              }
+            }
+            if (e.key === "ArrowDown") {
+              if (histoInputIdx == null) {
+                return;
+              } else {
+                if (histoInputIdx + 1 > histoInput.length - 1) {
+                  setInput(tempInput);
+                } else {
+                  let newHistoInputIdx = histoInputIdx + 1;
+                  setInput(histoInput[newHistoInputIdx]);
+                  setHistoInputIdx(newHistoInputIdx);
+                }
+              }
             }
           }}
         />
