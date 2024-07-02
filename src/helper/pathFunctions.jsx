@@ -7,7 +7,7 @@ export const switchCaseSetPath = (input, prompt) => {
 
   if (validPath.includes(commandWithoutCd.toLowerCase())) {
     if (
-      (commandWithoutCd == "portfolio" || commandWithoutCd == "Portfolio") &&
+      (commandWithoutCd.toLowerCase() == "portfolio" ) &&
       prompt != "scordi/portfolio>"
     )
       newPrompt = `${prompt.slice(0, prompt.length - 1)}/portfolio>`;
