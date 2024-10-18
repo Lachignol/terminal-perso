@@ -87,7 +87,7 @@ function ShowCat({ output, command, input, prompt }) {
         prompt == "scordi/portfolio>" && (
           <a
             className="cv-lien"
-            href={"/ScordilisAlexandre.pdf"}
+            href={"/Cv-Scordilis-Alexandre.pdf"}
             download="Scordilis_Alexandre_cv.pdf"
           >
             {" "}
