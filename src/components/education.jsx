@@ -9,9 +9,9 @@ const Education = () => {
       description: " Technicien supérieur en informatique-Diplôme niveau III.",
     },
     {
-      année: "--2023--  à --aujourd'hui--",
+      année: "--2024--  à --aujourd'hui--",
       description:
-        "Formation Ada tech school concepteur développeur d'applications-Bac+3,RNCP niveau IV (9 mois de formation et 12 mois d'alternance).",
+        "Etudiant à l'école 42 Paris.",
     },
   ];
 
