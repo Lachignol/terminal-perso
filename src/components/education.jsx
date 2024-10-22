@@ -6,7 +6,7 @@ const Education = () => {
     { année: "--2012--", description: "DUT-Technique de commercialisation." },
     {
       année: "--2016--",
-      description: " Technicien supérieur en informatique-Diplôme niveau III.",
+      description: "Technicien supérieur en informatique-Diplôme niveau III.",
     },
     {
       année: "--2024--  à --aujourd'hui--",
