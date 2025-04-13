@@ -73,26 +73,25 @@ input:focus {
 }
 
 .terminal-input-area {
-  display: flex; /* Permet d'aligner les éléments horizontalement */
-  align-items: center; /* Centrer verticalement les éléments */
+  display: flex; /* Utilise flex pour aligner les éléments horizontalement */
+  align-items: center; /* Centrer verticalement */
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .terminal-prompt {
-  display: flex; /* Affiche les parties du prompt sur la même ligne */
-  align-items: center; /* Aligne verticalement les éléments du prompt */
-  margin-right: 10px; /* Espacement entre le prompt et l'input */
+  display: inline-flex; /* Alignement horizontal des parties du prompt */
+  align-items: center;
   color: #03a64a;
 }
 
 .terminal-prompt .part-1 {
-  margin-right: 5px; /* Espacement entre les différentes parties du prompt */
+  margin-right: 5px; /* Espacement entre les parties du prompt */
 }
 
 .terminal-prompt .part-2 {
-  color: #a6afa5; /* Couleur différente pour la deuxième partie du prompt */
+  color: #a6afa5; /* Couleur différente pour la deuxième partie */
 }
 
 .terminal-input {
