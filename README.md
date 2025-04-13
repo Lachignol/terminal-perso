@@ -2,7 +2,7 @@
 
 ## APERCU DU PROJET:
 
-https://portfolio-scordilis-alexandre.vercel.app/
+https://portfolio.lachignol.com
 
 ## TECH STACK:
 1) Javascript,
