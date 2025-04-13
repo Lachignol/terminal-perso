@@ -22,6 +22,14 @@ body {
   margin-bottom: 0.75em;
 }
 
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #03a64a; /* Vert lumineux */
+}
+
 .terminal-input-area {
   display: inline-flex;
   width: 100%;
@@ -111,6 +119,12 @@ ul li {
 
 .wrong {
   color: rgb(241, 41, 14); /* Rouge vif pour l'erreur */
+}
+
+.introduction-text {
+  text-align: center; /* Centre le texte du titre */
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 767px) {
