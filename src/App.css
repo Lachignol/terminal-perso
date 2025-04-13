@@ -73,20 +73,32 @@ input:focus {
 }
 
 .terminal-input-area {
-  display: inline-flex;
+  display: flex; /* Permet d'aligner les éléments horizontalement */
+  align-items: center; /* Centrer verticalement les éléments */
   width: 100%;
-  align-items: center;
-  margin: 0; /* Supprime toute marge extérieure */
+  margin: 0;
+  padding: 0;
 }
 
 .terminal-prompt {
-  margin-right: auto;
+  display: flex; /* Affiche les parties du prompt sur la même ligne */
+  align-items: center; /* Aligne verticalement les éléments du prompt */
+  margin-right: 10px; /* Espacement entre le prompt et l'input */
+  color: #03a64a;
+}
+
+.terminal-prompt .part-1 {
+  margin-right: 5px; /* Espacement entre les différentes parties du prompt */
+}
+
+.terminal-prompt .part-2 {
+  color: #a6afa5; /* Couleur différente pour la deuxième partie du prompt */
 }
 
 .terminal-input {
   border: none;
-  background-color: transparent; /* Fond transparent */
-  color: blanchedalmond; /* Couleur du texte */
+  background-color: transparent;
+  color: blanchedalmond;
   font-family: "AndaleMono", monospace;
   font-weight: bold;
   font-size: 0.9em;
@@ -95,9 +107,8 @@ input:focus {
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
   outline: none;
-  width: 100%; /* Assure que l'input prend toute la largeur disponible */
-  padding: 0; /* Enlève tout padding interne */
-  margin: 0;  /* Enlève toute marge externe */
+  width: 100%;
+  padding: 5px 0;
 }
 
 .education-titre {
