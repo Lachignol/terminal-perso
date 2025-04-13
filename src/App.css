@@ -1,54 +1,17 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
   background: black;
   overflow-x: hidden;
 }
 
-@-webkit-keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .App {
@@ -77,19 +40,19 @@ body {
   justify-content: flex-end;
 }
 
-.introduction-text {
-  color: #03a64a;
-}
-
-.introduction {
+.introduction-text,
+.introduction,
+.education-titre,
+.contact-titre,
+.bio-titre,
+.help-titre-commande,
+.projet-titre {
   color: #03a64a;
 }
 
 a {
   color: #03a64a;
   text-decoration: none;
-  -webkit-animation: cursor-blink 1.5s steps(1) infinite;
-  -moz-animation: cursor-blink 1.5s steps(1) infinite;
   animation: cursor-blink 1.5s steps(1) infinite;
   display: inline-block;
   padding: 25px;
@@ -97,157 +60,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-ul {
-  list-style: none;
-  margin-right: 1rem;
-}
-
-input:focus {
-  /* cursor: url(./assets/cursor.cur), auto; */
-  caret-color: auto;
-  caret-shape: block;
-  outline: none !important;
-  scroll-behavior: auto;
-}
-
-.terminal-input-area {
-  display: inline-flex;
-  width: 100%;
-  align-items: center;
-}
-
-.terminal-prompt {
-  margin-right: auto;
-}
-
-.terminal-input {
-  border: none;
-  background-color: black;
-  display: inline-block;
-  font-family: "AndaleMono", monospace;
-  font-weight: bold;
-  font-size: 0.9em;
-  letter-spacing: 0.15em;
-  white-space: pre-wrap;
-  text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
-  line-height: 1;
-  color: blanchedalmond;
-  background: transparent;
-  border: 0px;
-  outline: none;
-  width: 100%;
-}
-
-.education-titre {
-  color: #03a64a;
-}
-
-.education-description {
-  color: blanchedalmond;
-}
-
-.projet-titre {
-  color: #03a64a;
-  margin-bottom: 1em;
-}
-
-.projet-description {
-  color: blanchedalmond;
-  margin-bottom: 0.5em;
-}
-
-.projet-stack {
-  color: blanchedalmond;
-}
-
-.document-item {
-  color: blanchedalmond;
-  padding: 5px;
-}
-
-.contact-titre {
-  color: #03a64a;
-}
-
-.contact-lien {
-  color: blanchedalmond;
-}
-
-.bio-titre {
-  color: #03a64a;
-}
-
-.bio-content {
-  color: blanchedalmond;
-}
-
-.pwd-result {
-  color: blanchedalmond;
-}
-
-.secret-titre {
-  color: blanchedalmond;
-}
-
-.secret-content {
-  color: darkgoldenrod;
-}
-
-.help-titre-commande {
-  color: #03a64a;
-}
-
-.help-explication {
-  color: blanchedalmond;
-}
-
-.help-exemple {
-  color: #a6afa5;
-}
-
-.cv-lien {
-  color: blanchedalmond;
-}
-
-.wrong {
-  color: rgb(241, 41, 14);
-}
-
-@media only screen and (min-width: 767px) {
-  .body {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .documents-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .image-name {
-    max-width: 100%;
-  }
-
-  .copyright {
-    display: none;
-  }
-
-  .separation {
-    display: none;
-  }
-
-  ul {
-    list-style: none;
-    margin-right: 1rem;
-  }
-
-  input:focus {
-    outline: none !important;
-  }
 }
