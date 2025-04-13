@@ -61,3 +61,150 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+ul {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+input:focus {
+  outline: none !important;
+  caret-color: auto;
+}
+
+.terminal-input-area {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+}
+
+.terminal-prompt {
+  margin-right: auto;
+}
+
+.terminal-input {
+  border: none;
+  background-color: transparent; /* Fond transparent */
+  color: blanchedalmond; /* Couleur du texte */
+  font-family: "AndaleMono", monospace;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 0.15em;
+  white-space: pre-wrap;
+  text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
+  line-height: 1;
+  outline: none;
+  width: 100%;
+}
+
+.education-titre {
+  color: #03a64a;
+}
+
+.education-description {
+  color: blanchedalmond;
+}
+
+.projet-titre {
+  color: #03a64a;
+  margin-bottom: 1em;
+}
+
+.projet-description {
+  color: blanchedalmond;
+  margin-bottom: 0.5em;
+}
+
+.projet-stack {
+  color: blanchedalmond;
+}
+
+.document-item {
+  color: blanchedalmond;
+  padding: 5px;
+}
+
+.contact-titre {
+  color: #03a64a;
+}
+
+.contact-lien {
+  color: blanchedalmond;
+}
+
+.bio-titre {
+  color: #03a64a;
+}
+
+.bio-content {
+  color: blanchedalmond;
+}
+
+.pwd-result {
+  color: blanchedalmond;
+}
+
+.secret-titre {
+  color: blanchedalmond;
+}
+
+.secret-content {
+  color: darkgoldenrod;
+}
+
+.help-titre-commande {
+  color: #03a64a;
+}
+
+.help-explication {
+  color: blanchedalmond;
+}
+
+.help-exemple {
+  color: #a6afa5;
+}
+
+.cv-lien {
+  color: blanchedalmond;
+}
+
+.wrong {
+  color: rgb(241, 41, 14);
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .documents-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image-name {
+    max-width: 100%;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .separation {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  input:focus {
+    outline: none !important;
+  }
+}
