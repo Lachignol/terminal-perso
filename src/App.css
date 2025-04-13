@@ -76,6 +76,7 @@ input:focus {
   display: inline-flex;
   width: 100%;
   align-items: center;
+  margin: 0; /* Supprime toute marge extérieure */
 }
 
 .terminal-prompt {
@@ -94,7 +95,9 @@ input:focus {
   text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
   line-height: 1;
   outline: none;
-  width: 100%;
+  width: 100%; /* Assure que l'input prend toute la largeur disponible */
+  padding: 0; /* Enlève tout padding interne */
+  margin: 0;  /* Enlève toute marge externe */
 }
 
 .education-titre {
