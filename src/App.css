@@ -9,7 +9,7 @@ body {
 }
 
 .App {
-  color: #03a64a;
+  color: #03a64a; /* Vert lumineux */
   display: block;
   font-family: "AndaleMono", monospace;
   margin-top: 1em;
@@ -17,7 +17,7 @@ body {
   font-size: 0.9em;
   letter-spacing: 0.15em;
   white-space: pre-wrap;
-  text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
+  text-shadow: 0 0 2px rgba(31, 240, 66, 0.75); /* Légère ombre verte */
   line-height: 1;
   margin-bottom: 0.75em;
 }
@@ -34,6 +34,7 @@ body {
 
 .terminal-prompt {
   margin-right: auto;
+  color: #03a64a; /* Vert lumineux */
 }
 
 .terminal-input {
@@ -45,15 +46,19 @@ body {
   font-family: "AndaleMono", monospace;
   font-weight: bold;
   font-size: 0.9em;
-  color: blanchedalmond;
+  color: blanchedalmond; /* Couleur de texte crème pour la saisie */
   white-space: nowrap;
   outline: none;
 }
 
 a {
-  color: #03a64a;
+  color: #03a64a; /* Vert lumineux */
   text-decoration: none;
   animation: cursor-blink 1.5s steps(1) infinite;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @keyframes cursor-blink {
@@ -65,6 +70,47 @@ a {
 input:focus {
   outline: none !important;
   caret-color: auto;
+}
+
+ul {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+ul li {
+  color: blanchedalmond; /* Couleur de texte crème pour la liste */
+}
+
+.projet-titre,
+.education-titre,
+.contact-titre,
+.bio-titre,
+.help-titre-commande,
+.secret-titre,
+.help-explication,
+.wrong {
+  color: #03a64a; /* Vert lumineux */
+}
+
+.projet-description,
+.education-description,
+.contact-lien,
+.bio-content,
+.pwd-result,
+.help-explication,
+.help-exemple,
+.secret-content,
+.document-item,
+.cv-lien {
+  color: blanchedalmond; /* Couleur de texte crème */
+}
+
+.secret-content {
+  color: darkgoldenrod; /* Doré pour la section secret */
+}
+
+.wrong {
+  color: rgb(241, 41, 14); /* Rouge vif pour l'erreur */
 }
 
 @media only screen and (max-width: 767px) {
