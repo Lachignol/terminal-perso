@@ -88,7 +88,9 @@ const Projects = () => {
 						</li>
 						{project.lienActif && (
 							<li>
-								<a href={project.lienActif}>lien du site</a>
+								<br>
+								</br>
+								<a href={project.lienActif} target="_blank">lien du site</a>
 							</li>
 						)}
 					</div>
